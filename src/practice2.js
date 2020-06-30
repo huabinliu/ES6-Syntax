@@ -1,5 +1,6 @@
 const inject = (items, sections) => {
-  sections.forEach((e, i) => items.splice(e.index + i, 0, e.content));
-  return items;
+  let result = [...items];
+  sections.forEach((e, i) => result.splice(e.index + i, 0, e.content));
+  return result;
 };
 export { inject };
